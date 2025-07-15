@@ -62,7 +62,7 @@ class Bondi{
       //return self.Avanzar_Personalizado(C_Paradas)
     }
     
-    if (IdaVuelta == 1) {
+    if (IdaVuelta == 1) { 
       var C_Paradas = Paradas - (Paradas - Parada)
       
       C_Paradas.times( { n => self.Avanzar() } )
