@@ -79,7 +79,7 @@ class Bondi{
   // Recarga el combustible del colectivo
   method Recargar_Combustible(){
     if (Parada == 0 || Parada == Paradas){
-        Combustible = 100
+        Combustible = 2*Paradas
     }
     else { return 'No se puede recargar aca' }
   }
