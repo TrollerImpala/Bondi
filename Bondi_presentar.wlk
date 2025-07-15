@@ -88,6 +88,10 @@ class Bondi{
   la lista de ida o vuelta
   */
   method Agregar_A_Lista(num){
+    if (num < 0){
+      return 'No se pueden agregar numeros negativos'
+    }
+    
     if (Pasajeros_Paradas_Ida.size() == Paradas || Pasajeros_Paradas_Vuelta.size() == Paradas){
       return 'No se pueden agregar más personas en las paradas'
     }
@@ -107,13 +111,15 @@ class Bondi{
     /* Agrega una coleccion de pasajeros a la coleccion de ida o vuelta de pasajeros */
     method Llenar_Lista_Personalizado(coleccion){
 
-        if (IdaVuelta == 0){
-            var Pasajeros_aux = Pasajeros_Paradas_Vuelta + coleccion
-        }
+        coleccion.forEach( { n => 
+          if (n < 0){
+            return 'No se pueden agregar numeros negativos'
+          } } )
+          
+      
+        var Pasajeros_aux = Pasajeros_Paradas_Vuelta + coleccion
         
-        if (IdaVuelta == 1){
-            var Pasajeros_aux = Pasajeros_Paradas_Ida + coleccion
-        }
+      
         
         
         if (Pasajeros_aux.size() > Paradas){

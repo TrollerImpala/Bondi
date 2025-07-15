@@ -1,0 +1,67 @@
+import Bondi_presentar.*
+
+test "Pasajeros Aleatorios" {
+    const Cole = new Bondi(Paradas = 20, Max_Pasajeros = 30)
+
+    Cole.Comenzar()
+
+    Cole.Avanzar()
+
+    Cole.Avanzar()
+
+    Cole.Avanzar_final()
+
+    Cole.Recargar_Combustible()
+
+    Cole.Avanzar()
+
+    Cole.Avanzar()
+
+    Cole.Avanzar_final()
+
+    Cole.Recargar_Combustible()
+
+    Cole.Avanzar_final()
+
+    Cole.Recargar_Combustible()
+
+
+}
+
+test "Pasajeros agregados por usuario" {
+
+    const Cole = new Bondi(Paradas = 20, Max_Pasajeros = 30)
+
+    Cole.Agregar_A_Lista(10)
+
+    Cole.Agregar_A_Lista(10)
+
+    Cole.Agregar_A_Lista(10)
+
+    Cole.Agregar_A_Lista(10)
+
+    Cole.Llenar_Lista_Personalizado([2,4,6,7,3,2])
+
+    Cole.Comenzar()
+    )
+    Cole.Avanzar()
+
+    Cole.Avanzar()
+
+    Cole.Avanzar_final()
+
+    Cole.Recargar_Combustible()
+
+    Cole.Avanzar()
+
+    Cole.Avanzar()
+
+    Cole.Avanzar_final()
+
+    Cole.Recargar_Combustible()
+
+    Cole.Avanzar_final()
+
+    Cole.Recargar_Combustible()
+   
+}
