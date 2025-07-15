@@ -38,9 +38,11 @@ test "Pasajeros agregados por usuario" {
 
     Cole.Agregar_A_Lista(10)
 
-    Cole.Agregar_A_Lista(10)
+    Cole.Agregar_A_Lista(-10)
 
-    Cole.Llenar_Lista_Personalizado([2,4,6,7,3,2])
+    Cole.Llenar_Lista_Personalizado([2,4,6])
+    
+    Cole.Llenar_Lista_Personalizado([2,-4,6])
 
     Cole.Comenzar()
     )

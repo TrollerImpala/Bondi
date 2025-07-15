@@ -112,30 +112,38 @@ class Bondi{
     method Llenar_Lista_Personalizado(coleccion){
 
         coleccion.forEach( { n => 
-          if (n < 0){
-            return 'No se pueden agregar numeros negativos'
-          } } )
           
-      
-        var Pasajeros_aux = Pasajeros_Paradas_Vuelta + coleccion
+          
+          
+          if (n > 0){
+            var Pasajeros_aux = Pasajeros_Paradas_Ida + [n]
         
       
         
         
-        if (Pasajeros_aux.size() > Paradas){
-            return 'No se pueden agregar más personas en las paradas'
-        }
-        else{
-    
-            if (IdaVuelta == 0){
-                Pasajeros_Paradas_Ida = Pasajeros_aux
+            if (Pasajeros_aux.size() > Paradas){
+              return 'No se pueden agregar más personas en las paradas'
             }
+            else{
     
-            if (IdaVuelta == 1){
+              if (IdaVuelta == 0){
+                Pasajeros_Paradas_Ida = Pasajeros_aux
+              }
+    
+              if (IdaVuelta == 1){
       
                 Pasajeros_Paradas_Vuelta = Pasajeros_aux
+              }
             }
-        }
+          
+          } 
+          
+          
+          
+          } )
+          
+      
+        
   }    
 
 
